@@ -1,0 +1,12 @@
+@use '/src/styles/mixin.scss' as mixin;
+
+.title {
+  text-align: center;
+  font-size: 3rem;
+  margin: 0 0 16px;
+
+  @include mixin.wide {
+    font-size: 4rem;
+    margin: 32px 0;
+  }
+}

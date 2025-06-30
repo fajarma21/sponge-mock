@@ -1,0 +1,66 @@
+@use '/src/styles/mixin.scss' as mixin;
+
+.copyBtn {
+  all: unset;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: var(--black);
+  cursor: unset;
+  position: fixed;
+  display: flex;
+  bottom: 12px;
+  right: 12px;
+  width: 64px;
+  height: 64px;
+  border-radius: 32px;
+  transition: width 250ms;
+
+  p {
+    display: none;
+    margin: 0;
+  }
+
+  &[data-copied] {
+    width: 120px;
+    font-weight: bold;
+  }
+
+  @media (min-width: 501px) {
+    cursor: pointer;
+    position: absolute;
+    bottom: -30px;
+    right: 0;
+    width: 80px;
+    height: 40px;
+    border-radius: 8px;
+
+    p {
+      display: block;
+    }
+
+    &[data-copied] {
+      width: 80px;
+      font-weight: normal;
+    }
+  }
+  // @include mixin.wide {
+  //   cursor: pointer;
+  //   position: absolute;
+  //   bottom: -30px;
+  //   right: 0;
+  //   width: 80px;
+  //   height: 40px;
+  //   border-radius: 8px;
+
+  //   p {
+  //     display: block;
+  //   }
+
+  //   &[data-copied] {
+  //     width: 80px;
+  //     font-weight: normal;
+  //   }
+  // }
+}
